@@ -12,8 +12,10 @@ namespace Sportacus
 {
     public partial class EventEntryForm : Form
     {
-        public EventEntryForm()
+        private int year;
+        public EventEntryForm(int year, string name)
         {
+            this.year = year;
             InitializeComponent();
         }
     }
