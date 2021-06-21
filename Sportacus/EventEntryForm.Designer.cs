@@ -29,19 +29,35 @@ namespace Sportacus
         /// </summary>
         private void InitializeComponent()
         {
+            this.lblTrack = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // lblTrack
+            // 
+            this.lblTrack.AutoSize = true;
+            this.lblTrack.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrack.Location = new System.Drawing.Point(51, 46);
+            this.lblTrack.Name = "lblTrack";
+            this.lblTrack.Size = new System.Drawing.Size(304, 55);
+            this.lblTrack.TabIndex = 0;
+            this.lblTrack.Text = "Track Events";
             // 
             // EventEntryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1974, 1929);
+            this.Controls.Add(this.lblTrack);
             this.Name = "EventEntryForm";
-            this.Text = "EventEntryForm";
+            this.Text = "Event Entry";
+            this.Load += new System.EventHandler(this.EventEntryForm_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label lblTrack;
     }
 }
