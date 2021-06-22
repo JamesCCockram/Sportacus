@@ -35,7 +35,7 @@ namespace Sportacus
             // 
             // btnYourEvents
             // 
-            this.btnYourEvents.BackColor = System.Drawing.Color.Black;
+            this.btnYourEvents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.btnYourEvents.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnYourEvents.ForeColor = System.Drawing.Color.White;
             this.btnYourEvents.Location = new System.Drawing.Point(658, 250);
@@ -47,7 +47,7 @@ namespace Sportacus
             // 
             // btnAvailableEvents
             // 
-            this.btnAvailableEvents.BackColor = System.Drawing.Color.Black;
+            this.btnAvailableEvents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.btnAvailableEvents.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAvailableEvents.ForeColor = System.Drawing.Color.White;
             this.btnAvailableEvents.Location = new System.Drawing.Point(658, 465);
