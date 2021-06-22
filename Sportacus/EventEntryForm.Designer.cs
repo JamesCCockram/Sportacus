@@ -77,6 +77,7 @@ namespace Sportacus
             this.btn200m.TabIndex = 2;
             this.btn200m.Text = "200m";
             this.btn200m.UseVisualStyleBackColor = false;
+            this.btn200m.Click += new System.EventHandler(this.btn200m_Click);
             // 
             // btn500m
             // 
