@@ -47,9 +47,10 @@ namespace Sportacus
             // 
             this.lblTrack.AutoSize = true;
             this.lblTrack.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrack.Location = new System.Drawing.Point(54, 61);
+            this.lblTrack.Location = new System.Drawing.Point(27, 32);
+            this.lblTrack.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTrack.Name = "lblTrack";
-            this.lblTrack.Size = new System.Drawing.Size(304, 55);
+            this.lblTrack.Size = new System.Drawing.Size(152, 29);
             this.lblTrack.TabIndex = 0;
             this.lblTrack.Text = "Track Events";
             // 
@@ -58,9 +59,10 @@ namespace Sportacus
             this.btn100m.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.btn100m.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn100m.ForeColor = System.Drawing.Color.White;
-            this.btn100m.Location = new System.Drawing.Point(64, 128);
+            this.btn100m.Location = new System.Drawing.Point(32, 67);
+            this.btn100m.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn100m.Name = "btn100m";
-            this.btn100m.Size = new System.Drawing.Size(400, 250);
+            this.btn100m.Size = new System.Drawing.Size(200, 130);
             this.btn100m.TabIndex = 1;
             this.btn100m.Text = "100m";
             this.btn100m.UseVisualStyleBackColor = false;
@@ -71,9 +73,10 @@ namespace Sportacus
             this.btn200m.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.btn200m.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn200m.ForeColor = System.Drawing.Color.White;
-            this.btn200m.Location = new System.Drawing.Point(537, 128);
+            this.btn200m.Location = new System.Drawing.Point(268, 67);
+            this.btn200m.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn200m.Name = "btn200m";
-            this.btn200m.Size = new System.Drawing.Size(400, 250);
+            this.btn200m.Size = new System.Drawing.Size(200, 130);
             this.btn200m.TabIndex = 2;
             this.btn200m.Text = "200m";
             this.btn200m.UseVisualStyleBackColor = false;
@@ -84,9 +87,10 @@ namespace Sportacus
             this.btn500m.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.btn500m.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn500m.ForeColor = System.Drawing.Color.White;
-            this.btn500m.Location = new System.Drawing.Point(1024, 128);
+            this.btn500m.Location = new System.Drawing.Point(512, 67);
+            this.btn500m.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn500m.Name = "btn500m";
-            this.btn500m.Size = new System.Drawing.Size(400, 250);
+            this.btn500m.Size = new System.Drawing.Size(200, 130);
             this.btn500m.TabIndex = 3;
             this.btn500m.Text = "500m";
             this.btn500m.UseVisualStyleBackColor = false;
@@ -96,9 +100,10 @@ namespace Sportacus
             this.btn1000m.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.btn1000m.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn1000m.ForeColor = System.Drawing.Color.White;
-            this.btn1000m.Location = new System.Drawing.Point(1504, 128);
+            this.btn1000m.Location = new System.Drawing.Point(752, 67);
+            this.btn1000m.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn1000m.Name = "btn1000m";
-            this.btn1000m.Size = new System.Drawing.Size(400, 250);
+            this.btn1000m.Size = new System.Drawing.Size(200, 130);
             this.btn1000m.TabIndex = 4;
             this.btn1000m.Text = "1000m";
             this.btn1000m.UseVisualStyleBackColor = false;
@@ -108,9 +113,10 @@ namespace Sportacus
             this.btnHighJump.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.btnHighJump.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHighJump.ForeColor = System.Drawing.Color.White;
-            this.btnHighJump.Location = new System.Drawing.Point(1024, 509);
+            this.btnHighJump.Location = new System.Drawing.Point(512, 265);
+            this.btnHighJump.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnHighJump.Name = "btnHighJump";
-            this.btnHighJump.Size = new System.Drawing.Size(400, 250);
+            this.btnHighJump.Size = new System.Drawing.Size(200, 130);
             this.btnHighJump.TabIndex = 7;
             this.btnHighJump.Text = "High Jump";
             this.btnHighJump.UseVisualStyleBackColor = false;
@@ -120,9 +126,10 @@ namespace Sportacus
             this.btnLongJump.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.btnLongJump.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLongJump.ForeColor = System.Drawing.Color.White;
-            this.btnLongJump.Location = new System.Drawing.Point(537, 509);
+            this.btnLongJump.Location = new System.Drawing.Point(268, 265);
+            this.btnLongJump.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLongJump.Name = "btnLongJump";
-            this.btnLongJump.Size = new System.Drawing.Size(400, 250);
+            this.btnLongJump.Size = new System.Drawing.Size(200, 130);
             this.btnLongJump.TabIndex = 6;
             this.btnLongJump.Text = "Long Jump";
             this.btnLongJump.UseVisualStyleBackColor = false;
@@ -132,9 +139,10 @@ namespace Sportacus
             this.btnTripleJump.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.btnTripleJump.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTripleJump.ForeColor = System.Drawing.Color.White;
-            this.btnTripleJump.Location = new System.Drawing.Point(64, 509);
+            this.btnTripleJump.Location = new System.Drawing.Point(32, 265);
+            this.btnTripleJump.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTripleJump.Name = "btnTripleJump";
-            this.btnTripleJump.Size = new System.Drawing.Size(400, 250);
+            this.btnTripleJump.Size = new System.Drawing.Size(200, 130);
             this.btnTripleJump.TabIndex = 5;
             this.btnTripleJump.Text = "Triple Jump";
             this.btnTripleJump.UseVisualStyleBackColor = false;
@@ -143,9 +151,10 @@ namespace Sportacus
             // 
             this.lblJumpingEvents.AutoSize = true;
             this.lblJumpingEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJumpingEvents.Location = new System.Drawing.Point(51, 439);
+            this.lblJumpingEvents.Location = new System.Drawing.Point(26, 228);
+            this.lblJumpingEvents.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblJumpingEvents.Name = "lblJumpingEvents";
-            this.lblJumpingEvents.Size = new System.Drawing.Size(366, 55);
+            this.lblJumpingEvents.Size = new System.Drawing.Size(183, 29);
             this.lblJumpingEvents.TabIndex = 9;
             this.lblJumpingEvents.Text = "Jumping Events";
             // 
@@ -153,9 +162,10 @@ namespace Sportacus
             // 
             this.lblOtherEvents.AutoSize = true;
             this.lblOtherEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOtherEvents.Location = new System.Drawing.Point(51, 812);
+            this.lblOtherEvents.Location = new System.Drawing.Point(26, 422);
+            this.lblOtherEvents.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblOtherEvents.Name = "lblOtherEvents";
-            this.lblOtherEvents.Size = new System.Drawing.Size(304, 55);
+            this.lblOtherEvents.Size = new System.Drawing.Size(151, 29);
             this.lblOtherEvents.TabIndex = 13;
             this.lblOtherEvents.Text = "Other Events";
             // 
@@ -164,9 +174,10 @@ namespace Sportacus
             this.btnDiscus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.btnDiscus.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDiscus.ForeColor = System.Drawing.Color.White;
-            this.btnDiscus.Location = new System.Drawing.Point(537, 882);
+            this.btnDiscus.Location = new System.Drawing.Point(268, 459);
+            this.btnDiscus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDiscus.Name = "btnDiscus";
-            this.btnDiscus.Size = new System.Drawing.Size(400, 250);
+            this.btnDiscus.Size = new System.Drawing.Size(200, 130);
             this.btnDiscus.TabIndex = 11;
             this.btnDiscus.Text = "Discus";
             this.btnDiscus.UseVisualStyleBackColor = false;
@@ -176,18 +187,19 @@ namespace Sportacus
             this.btnShotPut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.btnShotPut.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShotPut.ForeColor = System.Drawing.Color.White;
-            this.btnShotPut.Location = new System.Drawing.Point(64, 882);
+            this.btnShotPut.Location = new System.Drawing.Point(32, 459);
+            this.btnShotPut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnShotPut.Name = "btnShotPut";
-            this.btnShotPut.Size = new System.Drawing.Size(400, 250);
+            this.btnShotPut.Size = new System.Drawing.Size(200, 130);
             this.btnShotPut.TabIndex = 10;
             this.btnShotPut.Text = "Shot Put";
             this.btnShotPut.UseVisualStyleBackColor = false;
             // 
             // EventEntryForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1974, 1429);
+            this.ClientSize = new System.Drawing.Size(969, 612);
             this.Controls.Add(this.lblOtherEvents);
             this.Controls.Add(this.btnDiscus);
             this.Controls.Add(this.btnShotPut);
@@ -200,6 +212,7 @@ namespace Sportacus
             this.Controls.Add(this.btn200m);
             this.Controls.Add(this.btn100m);
             this.Controls.Add(this.lblTrack);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "EventEntryForm";
             this.Text = "Events";
             this.Load += new System.EventHandler(this.EventEntryForm_Load);

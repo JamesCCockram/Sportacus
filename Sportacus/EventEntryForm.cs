@@ -14,7 +14,7 @@ namespace Sportacus
 {
     public partial class EventEntryForm : Form
     {
-        class Event
+        public class Event
         {
             public string eventName;
             public string heat;
@@ -49,9 +49,8 @@ namespace Sportacus
             }
         }
 
-        public EventEntryForm(int year, string name)
+        public EventEntryForm(Form1.Student studentDetails)
         {
-            this.year = year;
             InitializeComponent();
         }
 
@@ -63,13 +62,15 @@ namespace Sportacus
 
         private void btn100m_Click(object sender, EventArgs e)
         {
-            EventSelection view = new EventSelection();
+            Form1.Student studentDetails = null;
+            EventSelection view = new EventSelection(studentDetails, events[1]);
             view.ShowDialog();
         }
 
         private void btn200m_Click(object sender, EventArgs e)
         {
-            EventSelection view = new EventSelection();
+            Form1.Student studentDetails = null;
+            EventSelection view = new EventSelection(studentDetails, events[2]);
             view.ShowDialog();
         }
     }

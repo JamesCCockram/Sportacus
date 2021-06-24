@@ -14,7 +14,7 @@ namespace Sportacus
 {
     public partial class Form1 : Form
     {
-        class Student
+        public class Student
         {
             public string firstName;
             public string lastName;
@@ -59,7 +59,7 @@ namespace Sportacus
         private void btnAvailableEvents_Click(object sender, EventArgs e)
         {
             //this.Hide();
-            EventEntryForm evf = new EventEntryForm(students[1].yearLevel, students[1].username);
+            EventEntryForm evf = new EventEntryForm(students[1]);
             evf.ShowDialog();
         }
 

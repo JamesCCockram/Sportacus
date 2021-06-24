@@ -36,11 +36,12 @@ namespace Sportacus
             // btnYourEvents
             // 
             this.btnYourEvents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.btnYourEvents.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnYourEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnYourEvents.ForeColor = System.Drawing.Color.White;
-            this.btnYourEvents.Location = new System.Drawing.Point(658, 250);
+            this.btnYourEvents.Location = new System.Drawing.Point(269, 106);
+            this.btnYourEvents.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnYourEvents.Name = "btnYourEvents";
-            this.btnYourEvents.Size = new System.Drawing.Size(250, 150);
+            this.btnYourEvents.Size = new System.Drawing.Size(200, 100);
             this.btnYourEvents.TabIndex = 0;
             this.btnYourEvents.Text = "Your Events";
             this.btnYourEvents.UseVisualStyleBackColor = false;
@@ -48,11 +49,12 @@ namespace Sportacus
             // btnAvailableEvents
             // 
             this.btnAvailableEvents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.btnAvailableEvents.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAvailableEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAvailableEvents.ForeColor = System.Drawing.Color.White;
-            this.btnAvailableEvents.Location = new System.Drawing.Point(658, 465);
+            this.btnAvailableEvents.Location = new System.Drawing.Point(269, 254);
+            this.btnAvailableEvents.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAvailableEvents.Name = "btnAvailableEvents";
-            this.btnAvailableEvents.Size = new System.Drawing.Size(250, 150);
+            this.btnAvailableEvents.Size = new System.Drawing.Size(200, 100);
             this.btnAvailableEvents.TabIndex = 1;
             this.btnAvailableEvents.Text = "Available Events";
             this.btnAvailableEvents.UseVisualStyleBackColor = false;
@@ -60,12 +62,13 @@ namespace Sportacus
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1474, 929);
+            this.ClientSize = new System.Drawing.Size(737, 483);
             this.Controls.Add(this.btnAvailableEvents);
             this.Controls.Add(this.btnYourEvents);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Sportacus";
