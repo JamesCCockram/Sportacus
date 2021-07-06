@@ -37,20 +37,25 @@ namespace Sportacus
             // 
             // lblEventName
             // 
+            this.lblEventName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEventName.AutoSize = true;
             this.lblEventName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEventName.Location = new System.Drawing.Point(65, 27);
+            this.lblEventName.Location = new System.Drawing.Point(150, 100);
+            this.lblEventName.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblEventName.Name = "lblEventName";
-            this.lblEventName.Size = new System.Drawing.Size(139, 25);
+            this.lblEventName.Size = new System.Drawing.Size(259, 48);
             this.lblEventName.TabIndex = 0;
             this.lblEventName.Text = "Event Name";
+            this.lblEventName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // radioButtonHeat1
             // 
             this.radioButtonHeat1.AutoSize = true;
-            this.radioButtonHeat1.Location = new System.Drawing.Point(70, 80);
+            this.radioButtonHeat1.Location = new System.Drawing.Point(220, 220);
+            this.radioButtonHeat1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.radioButtonHeat1.Name = "radioButtonHeat1";
-            this.radioButtonHeat1.Size = new System.Drawing.Size(58, 17);
+            this.radioButtonHeat1.Size = new System.Drawing.Size(108, 29);
             this.radioButtonHeat1.TabIndex = 1;
             this.radioButtonHeat1.TabStop = true;
             this.radioButtonHeat1.Text = "Heat A";
@@ -58,9 +63,10 @@ namespace Sportacus
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(53, 308);
+            this.btnCancel.Location = new System.Drawing.Point(100, 590);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(150, 44);
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -68,23 +74,24 @@ namespace Sportacus
             // 
             // btnJoin
             // 
-            this.btnJoin.Location = new System.Drawing.Point(153, 308);
+            this.btnJoin.Location = new System.Drawing.Point(310, 590);
+            this.btnJoin.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnJoin.Name = "btnJoin";
-            this.btnJoin.Size = new System.Drawing.Size(75, 23);
+            this.btnJoin.Size = new System.Drawing.Size(150, 44);
             this.btnJoin.TabIndex = 3;
             this.btnJoin.Text = "Join";
             this.btnJoin.UseVisualStyleBackColor = true;
             // 
             // EventSelection
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 361);
+            this.ClientSize = new System.Drawing.Size(574, 729);
             this.Controls.Add(this.btnJoin);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.radioButtonHeat1);
             this.Controls.Add(this.lblEventName);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "EventSelection";
             this.Text = "Event Selection";
             this.Load += new System.EventHandler(this.EventSelection_Load);

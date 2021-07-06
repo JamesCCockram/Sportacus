@@ -63,14 +63,21 @@ namespace Sportacus
         private void btn100m_Click(object sender, EventArgs e)
         {
             Form1.Student studentDetails = null;
-            EventSelection view = new EventSelection(studentDetails, events[1]);
+            EventSelection view = new EventSelection(studentDetails, events[0]);
             view.ShowDialog();
         }
 
         private void btn200m_Click(object sender, EventArgs e)
         {
             Form1.Student studentDetails = null;
-            EventSelection view = new EventSelection(studentDetails, events[2]);
+            EventSelection view = new EventSelection(studentDetails, events[3]);
+            view.ShowDialog();
+        }
+
+        private void btn500m_Click(object sender, EventArgs e)
+        {
+            Form1.Student studentDetails = null;
+            EventSelection view = new EventSelection(studentDetails, events[4]);
             view.ShowDialog();
         }
     }
