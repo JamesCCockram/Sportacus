@@ -28,5 +28,10 @@ namespace Sportacus
         {
             Close();
         }
+
+        private void btnJoin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
