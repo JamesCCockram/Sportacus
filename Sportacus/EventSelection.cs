@@ -13,11 +13,15 @@ namespace Sportacus
 {
     public partial class EventSelection : Form
     {
+        Main.Student student;
+        EventEntryForm.Event EventDetails;
 
-        public EventSelection(Form1.Student studentDetails, EventEntryForm.Event eventDetails)
+        public EventSelection(Main.Student studentDetails, EventEntryForm.Event eventDetails)
         {
             InitializeComponent();
             lblEventName.Text = eventDetails.eventName;
+            student = studentDetails;
+            EventDetails = eventDetails;
         }
 
         private void EventSelection_Load(object sender, EventArgs e)
@@ -47,7 +51,14 @@ namespace Sportacus
 
             writer.WriteStartElement("Students");
             writer.WriteStartElement("Student");
-            writer.WriteAttributeString("Heat", checkedButton.Text);
+            writer.WriteElementString("studentFirstName", student.firstName);
+            writer.WriteElementString("studentLastName", student.lastName);
+            writer.WriteElementString("House", student.house);
+            writer.WriteElementString("yearLevel", Convert.ToString(student.yearLevel));
+            writer.WriteElementString("event", EventDetails.eventName);
+            writer.WriteElementString("Heat", checkedButton.Text);
+            writer.WriteEndElement();
+            writer.WriteEndElement();
             writer.WriteEndDocument();
             writer.Flush();
             writer.Close();

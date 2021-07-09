@@ -12,7 +12,7 @@ using System.IO;
 
 namespace Sportacus
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
         public class Student
         {
@@ -28,7 +28,7 @@ namespace Sportacus
 
         Student[] students;
 
-        public Form1()
+        public Main()
         {
             InitializeComponent();
         }

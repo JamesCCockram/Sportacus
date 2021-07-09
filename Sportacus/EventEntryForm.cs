@@ -23,6 +23,8 @@ namespace Sportacus
 
         Event[] events;
 
+        Main.Student student;
+
         string filePath = "events.xml";
         private int year;
 
@@ -49,9 +51,11 @@ namespace Sportacus
             }
         }
 
-        public EventEntryForm(Form1.Student studentDetails)
+        public EventEntryForm(Main.Student studentDetails)
         {
             InitializeComponent();
+
+            student = studentDetails;
         }
 
         private void EventEntryForm_Load(object sender, EventArgs e)
@@ -62,22 +66,20 @@ namespace Sportacus
 
         private void btn100m_Click(object sender, EventArgs e)
         {
-            Form1.Student studentDetails = null;
-            EventSelection view = new EventSelection(studentDetails, events[0]);
+
+            EventSelection view = new EventSelection(student, events[0]);
             view.ShowDialog();
         }
 
         private void btn200m_Click(object sender, EventArgs e)
         {
-            Form1.Student studentDetails = null;
-            EventSelection view = new EventSelection(studentDetails, events[3]);
+            EventSelection view = new EventSelection(student, events[3]);
             view.ShowDialog();
         }
 
         private void btn500m_Click(object sender, EventArgs e)
         {
-            Form1.Student studentDetails = null;
-            EventSelection view = new EventSelection(studentDetails, events[4]);
+            EventSelection view = new EventSelection(student, events[4]);
             view.ShowDialog();
         }
     }
