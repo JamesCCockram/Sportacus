@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.Xml.Linq;
 
 namespace Sportacus
 {
@@ -15,6 +16,7 @@ namespace Sportacus
     {
         Main.Student student;
         EventEntryForm.Event EventDetails;
+        XDocument xmlDoc = XDocument.Load("StudentData.xml");
 
         public EventSelection(Main.Student studentDetails, EventEntryForm.Event eventDetails)
         {
@@ -38,11 +40,12 @@ namespace Sportacus
         {
             //Find which radio button is selected
             var checkedButton = panelHeats.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
-            Console.WriteLine(checkedButton.Text);
             Close();
 
-
-            XmlWriterSettings settings = new XmlWriterSettings();
+            xmlDoc.Element("Students").Add(new XElement("Student", new XElement("firstName", student.firstName), new XElement("lastName", student.lastName), new XElement("house", student.house), new XElement("yearLevel", Convert.ToString(student.yearLevel)), new XElement("eventName", EventDetails.eventName), new XElement("heat", checkedButton.Text)));
+            
+            xmlDoc.Save("StudentData.xml");
+            /*XmlWriterSettings settings = new XmlWriterSettings();
             settings.Indent = true;
             XmlWriter writer = XmlWriter.Create(@"StudentData.xml", settings);
 
@@ -62,7 +65,7 @@ namespace Sportacus
             writer.WriteEndDocument();
             writer.Flush();
             writer.Close();
-
+            */
 
         }
     }

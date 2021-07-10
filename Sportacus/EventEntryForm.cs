@@ -26,7 +26,6 @@ namespace Sportacus
         Main.Student student;
 
         string filePath = "events.xml";
-        private int year;
 
         private void ReadXML(string filePath)
         {
