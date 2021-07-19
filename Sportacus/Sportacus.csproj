@@ -93,6 +93,7 @@
     <EmbeddedResource Include="StudentEvents.resx">
       <DependentUpon>StudentEvents.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\StudentEvents.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

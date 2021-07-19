@@ -15,9 +15,16 @@ namespace Sportacus
         public StudentEvents()
         {
             InitializeComponent();
-            DataSet dataSet = new DataSet();
-            dataSet.ReadXml(@"StudentData.xml");
-            dataGridView1.DataSource = dataSet.Tables[0];
+            try
+            {
+                DataSet dataSet = new DataSet();
+                dataSet.ReadXml(@"StudentData.xml");
+                dataGridView1.DataSource = dataSet.Tables[0];
+            }
+            catch
+            {
+                MessageBox.Show("XML File not Found", "XML File not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
