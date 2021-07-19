@@ -33,9 +33,9 @@ namespace Sportacus
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnJoin = new System.Windows.Forms.Button();
             this.panelHeats = new System.Windows.Forms.Panel();
-            this.radioButtonHeatA = new System.Windows.Forms.RadioButton();
-            this.radioButtonHeatB = new System.Windows.Forms.RadioButton();
             this.radioButtonHeatC = new System.Windows.Forms.RadioButton();
+            this.radioButtonHeatB = new System.Windows.Forms.RadioButton();
+            this.radioButtonHeatA = new System.Windows.Forms.RadioButton();
             this.panelHeats.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,16 +85,16 @@ namespace Sportacus
             this.panelHeats.Size = new System.Drawing.Size(200, 111);
             this.panelHeats.TabIndex = 4;
             // 
-            // radioButtonHeatA
+            // radioButtonHeatC
             // 
-            this.radioButtonHeatA.AutoSize = true;
-            this.radioButtonHeatA.Location = new System.Drawing.Point(4, 13);
-            this.radioButtonHeatA.Name = "radioButtonHeatA";
-            this.radioButtonHeatA.Size = new System.Drawing.Size(84, 24);
-            this.radioButtonHeatA.TabIndex = 0;
-            this.radioButtonHeatA.TabStop = true;
-            this.radioButtonHeatA.Text = "Heat A";
-            this.radioButtonHeatA.UseVisualStyleBackColor = true;
+            this.radioButtonHeatC.AutoSize = true;
+            this.radioButtonHeatC.Location = new System.Drawing.Point(4, 73);
+            this.radioButtonHeatC.Name = "radioButtonHeatC";
+            this.radioButtonHeatC.Size = new System.Drawing.Size(84, 24);
+            this.radioButtonHeatC.TabIndex = 2;
+            this.radioButtonHeatC.TabStop = true;
+            this.radioButtonHeatC.Text = "Heat C";
+            this.radioButtonHeatC.UseVisualStyleBackColor = true;
             // 
             // radioButtonHeatB
             // 
@@ -107,21 +107,20 @@ namespace Sportacus
             this.radioButtonHeatB.Text = "Heat B";
             this.radioButtonHeatB.UseVisualStyleBackColor = true;
             // 
-            // radioButtonHeatC
+            // radioButtonHeatA
             // 
-            this.radioButtonHeatC.AutoSize = true;
-            this.radioButtonHeatC.Location = new System.Drawing.Point(4, 73);
-            this.radioButtonHeatC.Name = "radioButtonHeatC";
-            this.radioButtonHeatC.Size = new System.Drawing.Size(84, 24);
-            this.radioButtonHeatC.TabIndex = 2;
-            this.radioButtonHeatC.TabStop = true;
-            this.radioButtonHeatC.Text = "Heat C";
-            this.radioButtonHeatC.UseVisualStyleBackColor = true;
+            this.radioButtonHeatA.AutoSize = true;
+            this.radioButtonHeatA.Location = new System.Drawing.Point(4, 13);
+            this.radioButtonHeatA.Name = "radioButtonHeatA";
+            this.radioButtonHeatA.Size = new System.Drawing.Size(84, 24);
+            this.radioButtonHeatA.TabIndex = 0;
+            this.radioButtonHeatA.TabStop = true;
+            this.radioButtonHeatA.Text = "Heat A";
+            this.radioButtonHeatA.UseVisualStyleBackColor = true;
             // 
             // EventSelection
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(430, 583);
             this.Controls.Add(this.panelHeats);
             this.Controls.Add(this.btnJoin);

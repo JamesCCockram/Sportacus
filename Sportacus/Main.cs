@@ -71,5 +71,11 @@ namespace Sportacus
             ReadXML(filePath);
 
         }
+
+        private void btnYourEvents_Click(object sender, EventArgs e)
+        {
+            StudentEvents evf = new StudentEvents();
+            evf.ShowDialog();
+        }
     }
 }

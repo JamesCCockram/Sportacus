@@ -65,7 +65,6 @@ namespace Sportacus
 
         private void btn100m_Click(object sender, EventArgs e)
         {
-
             EventSelection view = new EventSelection(student, events[0]);
             view.ShowDialog();
         }
