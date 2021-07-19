@@ -92,8 +92,8 @@
     </Compile>
     <EmbeddedResource Include="StudentEvents.resx">
       <DependentUpon>StudentEvents.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <None Include="Properties\DataSources\StudentEvents.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -106,6 +106,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

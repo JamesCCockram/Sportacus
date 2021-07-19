@@ -12,19 +12,11 @@ namespace Sportacus
 {
     public partial class StudentEvents : Form
     {
-        public StudentEvents()
+        public StudentEvents(Main.Student Student, DataSet dataSet)
         {
             InitializeComponent();
-            try
-            {
-                DataSet dataSet = new DataSet();
-                dataSet.ReadXml(@"StudentData.xml");
-                dataGridView1.DataSource = dataSet.Tables[0];
-            }
-            catch
-            {
-                MessageBox.Show("XML File not Found", "XML File not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            dataGridView1.DataSource = dataSet.Tables[0];
+            label1.Text = Student.firstName + "'s Events";
         }
     }
 }

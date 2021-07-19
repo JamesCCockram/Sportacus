@@ -23,9 +23,9 @@ namespace Sportacus
             public int yearLevel;
         }
 
-        //open studentXML file
+        //Public Variables
+        string username;
         string filePath = "students.xml";
-
         Student[] students;
 
         public Main()
@@ -39,9 +39,10 @@ namespace Sportacus
 
             XmlNodeList xmlStudents = doc.GetElementsByTagName("student");
 
-            //set array size
+            //Set array size
             students = new Student[xmlStudents.Count];
-            //iterate through array
+
+            //Iterate through array
             int i = 0;
             foreach(XmlNode student in xmlStudents)
             {
@@ -58,24 +59,37 @@ namespace Sportacus
         }
         private void btnAvailableEvents_Click(object sender, EventArgs e)
         {
-            //this.Hide();
             EventEntryForm evf = new EventEntryForm(students[1]);
             evf.ShowDialog();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //Get logged in user
-            string username = Environment.UserName;
+            //Get username of logged in user
+            username = Environment.UserName;
 
+            //Read XML file
             ReadXML(filePath);
 
         }
 
         private void btnYourEvents_Click(object sender, EventArgs e)
         {
-            StudentEvents evf = new StudentEvents();
-            evf.ShowDialog();
+            try
+            {
+                //Open and Convert XML file to DataSet
+                DataSet dataSet = new DataSet();
+                dataSet.ReadXml(@"StudentData.xml");
+
+                //Open Table View of Student Events, and give function the data to display
+                StudentEvents evf = new StudentEvents(students[1], dataSet);
+                evf.ShowDialog();
+            }
+            catch
+            {
+                //If the XML file isn't found, create an error box telling the user what is wrong
+                MessageBox.Show("XML File not Found", "XML File not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
