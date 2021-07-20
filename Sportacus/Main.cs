@@ -26,12 +26,14 @@ namespace Sportacus
         //Public Variables
         string username;
         string filePath = "students.xml";
+        int studentID;
         Student[] students;
 
         public Main()
         {
             InitializeComponent();
         }
+
         private void ReadXML(string filePath)
         {
             XmlDocument doc = new XmlDocument();
@@ -59,18 +61,39 @@ namespace Sportacus
         }
         private void btnAvailableEvents_Click(object sender, EventArgs e)
         {
-            EventEntryForm evf = new EventEntryForm(students[1]);
+            //Open Event Entry Form
+            EventEntryForm evf = new EventEntryForm(students[studentID]);
             evf.ShowDialog();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //Get username of logged in user
-            username = Environment.UserName;
-
             //Read XML file
             ReadXML(filePath);
 
+            //Get username of logged in user
+            username = Environment.UserName;
+            studentID = FindLoggedInUser(students, username);
+            //studentID = -1;
+            //Check if student exists
+            if(studentID == -1)
+            {
+                MessageBox.Show("Student not found, Please contact the admin to fix the issue", "Student Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
+            }
+        }
+
+        private int FindLoggedInUser(Student[] students, string username)
+        {
+            int location = -1;
+            for (int i = 0; i < students.Length; i++)
+            {
+                if(students[i].username == username)
+                {
+                    location = i;
+                }
+            }
+            return location;
         }
 
         private void btnYourEvents_Click(object sender, EventArgs e)
@@ -82,13 +105,13 @@ namespace Sportacus
                 dataSet.ReadXml(@"StudentData.xml");
 
                 //Open Table View of Student Events, and give function the data to display
-                StudentEvents evf = new StudentEvents(students[1].firstName, dataSet);
+                StudentEvents evf = new StudentEvents(students[studentID].firstName, dataSet);
                 evf.ShowDialog();
             }
             catch
             {
                 //If the XML file isn't found, create an error box telling the user what is wrong
-                MessageBox.Show("XML File not Found", "XML File not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("XML file not found, please signup to an event before viewing this page", "XML file not found", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
