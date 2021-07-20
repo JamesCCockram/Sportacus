@@ -49,7 +49,7 @@ namespace Sportacus
             this.lblTrack.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTrack.Location = new System.Drawing.Point(40, 50);
             this.lblTrack.Name = "lblTrack";
-            this.lblTrack.Size = new System.Drawing.Size(227, 40);
+            this.lblTrack.Size = new System.Drawing.Size(304, 55);
             this.lblTrack.TabIndex = 0;
             this.lblTrack.Text = "Track Events";
             // 
@@ -146,7 +146,7 @@ namespace Sportacus
             this.lblJumpingEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJumpingEvents.Location = new System.Drawing.Point(39, 350);
             this.lblJumpingEvents.Name = "lblJumpingEvents";
-            this.lblJumpingEvents.Size = new System.Drawing.Size(273, 40);
+            this.lblJumpingEvents.Size = new System.Drawing.Size(366, 55);
             this.lblJumpingEvents.TabIndex = 9;
             this.lblJumpingEvents.Text = "Jumping Events";
             // 
@@ -156,7 +156,7 @@ namespace Sportacus
             this.lblOtherEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOtherEvents.Location = new System.Drawing.Point(39, 650);
             this.lblOtherEvents.Name = "lblOtherEvents";
-            this.lblOtherEvents.Size = new System.Drawing.Size(227, 40);
+            this.lblOtherEvents.Size = new System.Drawing.Size(304, 55);
             this.lblOtherEvents.TabIndex = 13;
             this.lblOtherEvents.Text = "Other Events";
             // 
@@ -200,8 +200,10 @@ namespace Sportacus
             this.Controls.Add(this.btn200m);
             this.Controls.Add(this.btn100m);
             this.Controls.Add(this.lblTrack);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "EventEntryForm";
-            this.Text = "Events";
+            this.Text = "Available Events";
             this.Load += new System.EventHandler(this.EventEntryForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

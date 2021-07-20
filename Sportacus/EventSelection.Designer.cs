@@ -45,10 +45,10 @@ namespace Sportacus
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEventName.AutoSize = true;
             this.lblEventName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEventName.Location = new System.Drawing.Point(112, 80);
+            this.lblEventName.Location = new System.Drawing.Point(115, 84);
             this.lblEventName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEventName.Name = "lblEventName";
-            this.lblEventName.Size = new System.Drawing.Size(202, 37);
+            this.lblEventName.Size = new System.Drawing.Size(259, 48);
             this.lblEventName.TabIndex = 0;
             this.lblEventName.Text = "Event Name";
             this.lblEventName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -58,7 +58,7 @@ namespace Sportacus
             this.btnCancel.Location = new System.Drawing.Point(75, 472);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(112, 35);
+            this.btnCancel.Size = new System.Drawing.Size(110, 50);
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -69,7 +69,7 @@ namespace Sportacus
             this.btnJoin.Location = new System.Drawing.Point(232, 472);
             this.btnJoin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnJoin.Name = "btnJoin";
-            this.btnJoin.Size = new System.Drawing.Size(112, 35);
+            this.btnJoin.Size = new System.Drawing.Size(110, 50);
             this.btnJoin.TabIndex = 3;
             this.btnJoin.Text = "Join";
             this.btnJoin.UseVisualStyleBackColor = true;
@@ -82,15 +82,16 @@ namespace Sportacus
             this.panelHeats.Controls.Add(this.radioButtonHeatA);
             this.panelHeats.Location = new System.Drawing.Point(119, 152);
             this.panelHeats.Name = "panelHeats";
-            this.panelHeats.Size = new System.Drawing.Size(200, 111);
+            this.panelHeats.Size = new System.Drawing.Size(200, 164);
             this.panelHeats.TabIndex = 4;
             // 
             // radioButtonHeatC
             // 
             this.radioButtonHeatC.AutoSize = true;
-            this.radioButtonHeatC.Location = new System.Drawing.Point(4, 73);
+            this.radioButtonHeatC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonHeatC.Location = new System.Drawing.Point(4, 85);
             this.radioButtonHeatC.Name = "radioButtonHeatC";
-            this.radioButtonHeatC.Size = new System.Drawing.Size(84, 24);
+            this.radioButtonHeatC.Size = new System.Drawing.Size(130, 35);
             this.radioButtonHeatC.TabIndex = 2;
             this.radioButtonHeatC.TabStop = true;
             this.radioButtonHeatC.Text = "Heat C";
@@ -99,9 +100,10 @@ namespace Sportacus
             // radioButtonHeatB
             // 
             this.radioButtonHeatB.AutoSize = true;
-            this.radioButtonHeatB.Location = new System.Drawing.Point(4, 43);
+            this.radioButtonHeatB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonHeatB.Location = new System.Drawing.Point(6, 44);
             this.radioButtonHeatB.Name = "radioButtonHeatB";
-            this.radioButtonHeatB.Size = new System.Drawing.Size(84, 24);
+            this.radioButtonHeatB.Size = new System.Drawing.Size(128, 35);
             this.radioButtonHeatB.TabIndex = 1;
             this.radioButtonHeatB.TabStop = true;
             this.radioButtonHeatB.Text = "Heat B";
@@ -110,9 +112,10 @@ namespace Sportacus
             // radioButtonHeatA
             // 
             this.radioButtonHeatA.AutoSize = true;
-            this.radioButtonHeatA.Location = new System.Drawing.Point(4, 13);
+            this.radioButtonHeatA.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonHeatA.Location = new System.Drawing.Point(6, 3);
             this.radioButtonHeatA.Name = "radioButtonHeatA";
-            this.radioButtonHeatA.Size = new System.Drawing.Size(84, 24);
+            this.radioButtonHeatA.Size = new System.Drawing.Size(128, 35);
             this.radioButtonHeatA.TabIndex = 0;
             this.radioButtonHeatA.TabStop = true;
             this.radioButtonHeatA.Text = "Heat A";
@@ -120,12 +123,18 @@ namespace Sportacus
             // 
             // EventSelection
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.AcceptButton = this.btnJoin;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(430, 583);
             this.Controls.Add(this.panelHeats);
             this.Controls.Add(this.btnJoin);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblEventName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "EventSelection";
             this.Text = "Event Selection";
             this.Load += new System.EventHandler(this.EventSelection_Load);

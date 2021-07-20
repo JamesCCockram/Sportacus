@@ -55,7 +55,7 @@ namespace Sportacus
             this.btnAvailableEvents.Name = "btnAvailableEvents";
             this.btnAvailableEvents.Size = new System.Drawing.Size(300, 154);
             this.btnAvailableEvents.TabIndex = 1;
-            this.btnAvailableEvents.Text = "Available Events";
+            this.btnAvailableEvents.Text = "Sign-up to an Event";
             this.btnAvailableEvents.UseVisualStyleBackColor = false;
             this.btnAvailableEvents.Click += new System.EventHandler(this.btnAvailableEvents_Click);
             // 

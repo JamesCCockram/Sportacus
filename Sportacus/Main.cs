@@ -82,7 +82,7 @@ namespace Sportacus
                 dataSet.ReadXml(@"StudentData.xml");
 
                 //Open Table View of Student Events, and give function the data to display
-                StudentEvents evf = new StudentEvents(students[1], dataSet);
+                StudentEvents evf = new StudentEvents(students[1].firstName, dataSet);
                 evf.ShowDialog();
             }
             catch

@@ -12,11 +12,16 @@ namespace Sportacus
 {
     public partial class StudentEvents : Form
     {
-        public StudentEvents(Main.Student Student, DataSet dataSet)
+        public StudentEvents(string Student, DataSet dataSet)
         {
             InitializeComponent();
             dataGridView1.DataSource = dataSet.Tables[0];
-            label1.Text = Student.firstName + "'s Events";
+            label1.Text = Student + "'s Events";
+        }
+
+        private void StudentEvents_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
