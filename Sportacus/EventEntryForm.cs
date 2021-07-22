@@ -27,6 +27,27 @@ namespace Sportacus
 
         string filePath = "events.xml";
 
+        private void ButtonHandler(string targetEvent)
+        {
+            int location = -1;
+            for (int i = 0; i < events.Length; i++)
+            {
+                if (events[i].eventName == targetEvent)
+                {
+                    location = i;
+                }
+            }
+            try
+            {
+                EventSelection view = new EventSelection(student, events[location]);
+                view.ShowDialog();
+            }
+            catch
+            {
+                MessageBox.Show("XML File not found", "XML file not found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void ReadXML(string filePath)
         {
             XmlDocument doc = new XmlDocument();
@@ -65,20 +86,17 @@ namespace Sportacus
 
         private void btn100m_Click(object sender, EventArgs e)
         {
-            EventSelection view = new EventSelection(student, events[0]);
-            view.ShowDialog();
+            ButtonHandler(btn100m.Text);
         }
 
         private void btn200m_Click(object sender, EventArgs e)
         {
-            EventSelection view = new EventSelection(student, events[3]);
-            view.ShowDialog();
+            ButtonHandler(btn200m.Text);
         }
 
         private void btn500m_Click(object sender, EventArgs e)
         {
-            EventSelection view = new EventSelection(student, events[4]);
-            view.ShowDialog();
+            ButtonHandler(btn500m.Text);
         }
     }
 }
