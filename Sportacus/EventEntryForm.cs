@@ -64,7 +64,7 @@ namespace Sportacus
                 Event theEvent = new Event();
 
                 theEvent.eventName = event1["eventName"].InnerText;
-                theEvent.heat = event1["heat"].InnerText;
+                //theEvent.heat = event1["heat"].InnerText;
                 theEvent.yearLevel = Convert.ToInt32(event1["eventYearLevel"].InnerText);
                 events[i] = theEvent;
                 i++;
@@ -81,7 +81,6 @@ namespace Sportacus
         private void EventEntryForm_Load(object sender, EventArgs e)
         {
             ReadXML(filePath);
-            lblTrack.Text = events[1].eventName;
         }
 
         private void btn100m_Click(object sender, EventArgs e)
@@ -97,6 +96,36 @@ namespace Sportacus
         private void btn500m_Click(object sender, EventArgs e)
         {
             ButtonHandler(btn500m.Text);
+        }
+
+        private void btn1000m_Click(object sender, EventArgs e)
+        {
+            ButtonHandler(btn1000m.Text);
+        }
+
+        private void btnTripleJump_Click(object sender, EventArgs e)
+        {
+            ButtonHandler(btnTripleJump.Text);
+        }
+
+        private void btnLongJump_Click(object sender, EventArgs e)
+        {
+            ButtonHandler(btnLongJump.Text);
+        }
+
+        private void btnHighJump_Click(object sender, EventArgs e)
+        {
+            ButtonHandler(btnHighJump.Text);
+        }
+
+        private void btnShotPut_Click(object sender, EventArgs e)
+        {
+            ButtonHandler(btnShotPut.Text);
+        }
+
+        private void btnDiscus_Click(object sender, EventArgs e)
+        {
+            ButtonHandler(btnDiscus.Text);
         }
     }
 }

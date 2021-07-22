@@ -49,7 +49,7 @@ namespace Sportacus
             this.lblTrack.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTrack.Location = new System.Drawing.Point(40, 50);
             this.lblTrack.Name = "lblTrack";
-            this.lblTrack.Size = new System.Drawing.Size(304, 55);
+            this.lblTrack.Size = new System.Drawing.Size(227, 40);
             this.lblTrack.TabIndex = 0;
             this.lblTrack.Text = "Track Events";
             // 
@@ -103,6 +103,7 @@ namespace Sportacus
             this.btn1000m.TabIndex = 4;
             this.btn1000m.Text = "1000m";
             this.btn1000m.UseVisualStyleBackColor = false;
+            this.btn1000m.Click += new System.EventHandler(this.btn1000m_Click);
             // 
             // btnHighJump
             // 
@@ -115,6 +116,7 @@ namespace Sportacus
             this.btnHighJump.TabIndex = 7;
             this.btnHighJump.Text = "High Jump";
             this.btnHighJump.UseVisualStyleBackColor = false;
+            this.btnHighJump.Click += new System.EventHandler(this.btnHighJump_Click);
             // 
             // btnLongJump
             // 
@@ -127,6 +129,7 @@ namespace Sportacus
             this.btnLongJump.TabIndex = 6;
             this.btnLongJump.Text = "Long Jump";
             this.btnLongJump.UseVisualStyleBackColor = false;
+            this.btnLongJump.Click += new System.EventHandler(this.btnLongJump_Click);
             // 
             // btnTripleJump
             // 
@@ -139,6 +142,7 @@ namespace Sportacus
             this.btnTripleJump.TabIndex = 5;
             this.btnTripleJump.Text = "Triple Jump";
             this.btnTripleJump.UseVisualStyleBackColor = false;
+            this.btnTripleJump.Click += new System.EventHandler(this.btnTripleJump_Click);
             // 
             // lblJumpingEvents
             // 
@@ -146,7 +150,7 @@ namespace Sportacus
             this.lblJumpingEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJumpingEvents.Location = new System.Drawing.Point(39, 350);
             this.lblJumpingEvents.Name = "lblJumpingEvents";
-            this.lblJumpingEvents.Size = new System.Drawing.Size(366, 55);
+            this.lblJumpingEvents.Size = new System.Drawing.Size(273, 40);
             this.lblJumpingEvents.TabIndex = 9;
             this.lblJumpingEvents.Text = "Jumping Events";
             // 
@@ -156,7 +160,7 @@ namespace Sportacus
             this.lblOtherEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOtherEvents.Location = new System.Drawing.Point(39, 650);
             this.lblOtherEvents.Name = "lblOtherEvents";
-            this.lblOtherEvents.Size = new System.Drawing.Size(304, 55);
+            this.lblOtherEvents.Size = new System.Drawing.Size(227, 40);
             this.lblOtherEvents.TabIndex = 13;
             this.lblOtherEvents.Text = "Other Events";
             // 
@@ -171,6 +175,7 @@ namespace Sportacus
             this.btnDiscus.TabIndex = 11;
             this.btnDiscus.Text = "Discus";
             this.btnDiscus.UseVisualStyleBackColor = false;
+            this.btnDiscus.Click += new System.EventHandler(this.btnDiscus_Click);
             // 
             // btnShotPut
             // 
@@ -183,6 +188,7 @@ namespace Sportacus
             this.btnShotPut.TabIndex = 10;
             this.btnShotPut.Text = "Shot Put";
             this.btnShotPut.UseVisualStyleBackColor = false;
+            this.btnShotPut.Click += new System.EventHandler(this.btnShotPut_Click);
             // 
             // EventEntryForm
             // 
