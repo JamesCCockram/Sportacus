@@ -21,6 +21,7 @@ namespace Sportacus
             public string username;
             public string house;
             public int yearLevel;
+            public bool isStudent;
         }
 
         //Public Variables
@@ -55,6 +56,7 @@ namespace Sportacus
                 theStudent.lastName = student["lastName"].InnerText;
                 theStudent.house = student["house"].InnerText;
                 theStudent.yearLevel = Convert.ToInt32(student["yearLevel"].InnerText);
+                theStudent.isStudent = Convert.ToBoolean(student["isStudent"].InnerText);
                 students[i] = theStudent;
                 i++;
             }
@@ -104,9 +106,20 @@ namespace Sportacus
                 DataSet dataSet = new DataSet();
                 dataSet.ReadXml(@"StudentData.xml");
 
-                //Open Table View of Student Events, and give function the data to display
-                StudentEvents evf = new StudentEvents(students[studentID].firstName, dataSet);
-                evf.ShowDialog();
+                if(students[studentID].isStudent == true)
+                {
+                    //Open Table View of Student Events, and give function the data to display
+                    StudentEvents evf = new StudentEvents(students[studentID].firstName, dataSet);
+                    evf.ShowDialog();
+                }
+                else
+                {
+                    //Open Table View of Student Events, and give function the data to display
+                    StudentEvents evf = new StudentEvents(students[studentID].firstName, dataSet);
+                    evf.ShowDialog();
+                }
+
+
             }
             catch
             {
