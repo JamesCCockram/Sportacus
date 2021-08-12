@@ -94,13 +94,14 @@ namespace Sportacus
             // 
             this.studentEventsBindingSource3.DataSource = typeof(Sportacus.Events);
             // 
-            // StudentEvents
+            // Events
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(1478, 844);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "StudentEvents";
+            this.MaximizeBox = false;
+            this.Name = "Events";
             this.Text = "Events";
             this.Load += new System.EventHandler(this.StudentEvents_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
