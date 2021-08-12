@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
-using System.IO;
 
 namespace Sportacus
 {
@@ -62,7 +55,7 @@ namespace Sportacus
 
             //Iterate through array
             int i = 0;
-            foreach(XmlNode student in xmlStudents)
+            foreach (XmlNode student in xmlStudents)
             {
                 Student theStudent = new Student();
 
@@ -93,14 +86,14 @@ namespace Sportacus
             studentID = FindLoggedInUser(students, username);
 
             //Check if student exists
-            if(studentID == -1)
+            if (studentID == -1)
             {
                 MessageBox.Show("Student not found, Please contact the admin to fix the issue", "Student Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Close();
             }
 
             //Display Teacher view
-            if(students[studentID].isStudent == false)
+            if (students[studentID].isStudent == false)
             {
                 btnYourEvents.Text = "Student Event List";
                 btnAvailableEvents.Hide();
@@ -118,7 +111,7 @@ namespace Sportacus
             int location = -1;
             for (int i = 0; i < students.Length; i++)
             {
-                if(students[i].username == username)
+                if (students[i].username == username)
                 {
                     location = i;
                 }

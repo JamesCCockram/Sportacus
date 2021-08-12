@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
@@ -56,7 +50,7 @@ namespace Sportacus
             {
                 // If the file doesn't exist, create a new structured StudentData XML file
                 XmlWriterSettings settings = new XmlWriterSettings();
-                    settings.Indent = true;
+                settings.Indent = true;
                 XmlWriter writer = XmlWriter.Create(@"StudentData.xml", settings);
 
                 writer.WriteStartDocument();
