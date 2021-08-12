@@ -12,11 +12,32 @@ namespace Sportacus
 {
     public partial class StudentEvents : Form
     {
-        public StudentEvents(string Student, DataView dataSet)
+        public StudentEvents(string Student, DataView dataSet, bool isStudent)
         {
             InitializeComponent();
             dataGridView1.DataSource = dataSet;
-            this.dataGridView1.Columns["username"].Visible = false;
+
+            //Hide Username Column
+            dataGridView1.Columns["username"].Visible = false;
+
+            //Rename Columns
+            dataGridView1.Columns["firstname"].HeaderText = "First Name";
+            dataGridView1.Columns["lastname"].HeaderText = "Last Name";
+            dataGridView1.Columns["house"].HeaderText = "House";
+            dataGridView1.Columns["yearLevel"].HeaderText = "Year Level";
+            dataGridView1.Columns["eventName"].HeaderText = "Event Name";
+            dataGridView1.Columns["heat"].HeaderText = "Heat";
+
+            //Student View
+            if (isStudent == true)
+            {
+                dataGridView1.Columns["firstName"].Visible = false;
+                dataGridView1.Columns["lastName"].Visible = false;
+                dataGridView1.Columns["house"].Visible = false;
+                dataGridView1.Columns["yearLevel"].Visible = false;
+            }
+
+            //Create a personalized label
             label1.Text = Student + "'s Events";
         }
 

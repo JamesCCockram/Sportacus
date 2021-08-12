@@ -121,13 +121,13 @@ namespace Sportacus
                     //Only display student events, filter other students out of dataset
                     view.RowFilter = $"UserName='{students[studentID].username}'";
 
-                    StudentEvents evf = new StudentEvents(students[studentID].firstName, view);
+                    StudentEvents evf = new StudentEvents(students[studentID].firstName, view, students[studentID].isStudent);
                     evf.ShowDialog();
                 }
                 else
                 {
                     //Teacher view, includes all students in events xml
-                    StudentEvents evf = new StudentEvents(students[studentID].firstName, view);
+                    StudentEvents evf = new StudentEvents(students[studentID].firstName, view, students[studentID].isStudent);
                     evf.ShowDialog();
                 }
 
