@@ -66,11 +66,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StudentEvents.cs">
+    <Compile Include="Events.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentEvents.Designer.cs">
-      <DependentUpon>StudentEvents.cs</DependentUpon>
+    <Compile Include="Events.Designer.cs">
+      <DependentUpon>Events.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="EventEntryForm.resx">
       <DependentUpon>EventEntryForm.cs</DependentUpon>
@@ -90,8 +90,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="StudentEvents.resx">
-      <DependentUpon>StudentEvents.cs</DependentUpon>
+    <EmbeddedResource Include="Events.resx">
+      <DependentUpon>Events.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

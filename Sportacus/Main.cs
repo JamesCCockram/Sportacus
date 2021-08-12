@@ -14,6 +14,9 @@ namespace Sportacus
 {
     public partial class Main : Form
     {
+        /// <summary>
+        /// Used to store user information
+        /// </summary>
         public class Student
         {
             public string firstName;
@@ -34,7 +37,10 @@ namespace Sportacus
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Reads XML file from provided file path, then writes to the students array
+        /// </summary>
+        /// <param name="filePath"></param>
         private void ReadXML(string filePath)
         {
             XmlDocument doc = new XmlDocument();
@@ -85,7 +91,7 @@ namespace Sportacus
             //Get username of logged in user
             username = Environment.UserName;
             studentID = FindLoggedInUser(students, username);
-            //studentID = -1;
+
             //Check if student exists
             if(studentID == -1)
             {
@@ -96,11 +102,17 @@ namespace Sportacus
             //Display Teacher view
             if(students[studentID].isStudent == false)
             {
-                btnYourEvents.Text = "Student Events";
+                btnYourEvents.Text = "Student Event List";
                 btnAvailableEvents.Hide();
             }
         }
 
+        /// <summary>
+        /// Finds who the logged in user is, then finds the username in the student list
+        /// </summary>
+        /// <param name="students"></param>
+        /// <param name="username"></param>
+        /// <returns>Location of the student in the array</returns>
         private int FindLoggedInUser(Student[] students, string username)
         {
             int location = -1;
@@ -130,13 +142,13 @@ namespace Sportacus
                     //Only display student events, filter other students out of dataset
                     view.RowFilter = $"UserName='{students[studentID].username}'";
 
-                    StudentEvents evf = new StudentEvents(students[studentID].firstName, view, students[studentID].isStudent, students[studentID].house);
+                    Events evf = new Events(students[studentID].firstName, view, students[studentID].isStudent, students[studentID].house);
                     evf.ShowDialog();
                 }
                 else
                 {
                     //Teacher view, includes all students in events xml
-                    StudentEvents evf = new StudentEvents(students[studentID].firstName, view, students[studentID].isStudent, students[studentID].house);
+                    Events evf = new Events(students[studentID].firstName, view, students[studentID].isStudent, students[studentID].house);
                     evf.ShowDialog();
                 }
 

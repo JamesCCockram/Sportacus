@@ -1,7 +1,7 @@
 ﻿
 namespace Sportacus
 {
-    partial class StudentEvents
+    partial class Events
     {
         /// <summary>
         /// Required designer variable.
@@ -80,19 +80,19 @@ namespace Sportacus
             // 
             // studentEventsBindingSource
             // 
-            this.studentEventsBindingSource.DataSource = typeof(Sportacus.StudentEvents);
+            this.studentEventsBindingSource.DataSource = typeof(Sportacus.Events);
             // 
             // studentEventsBindingSource1
             // 
-            this.studentEventsBindingSource1.DataSource = typeof(Sportacus.StudentEvents);
+            this.studentEventsBindingSource1.DataSource = typeof(Sportacus.Events);
             // 
             // studentEventsBindingSource2
             // 
-            this.studentEventsBindingSource2.DataSource = typeof(Sportacus.StudentEvents);
+            this.studentEventsBindingSource2.DataSource = typeof(Sportacus.Events);
             // 
             // studentEventsBindingSource3
             // 
-            this.studentEventsBindingSource3.DataSource = typeof(Sportacus.StudentEvents);
+            this.studentEventsBindingSource3.DataSource = typeof(Sportacus.Events);
             // 
             // StudentEvents
             // 

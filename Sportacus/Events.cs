@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Sportacus
 {
-    public partial class StudentEvents : Form
+    public partial class Events : Form
     {
-        public StudentEvents(string Student, DataView dataSet, bool isStudent, string House)
+        public Events(string Student, DataView dataSet, bool isStudent, string House)
         {
             InitializeComponent();
             dataGridView1.DataSource = dataSet;

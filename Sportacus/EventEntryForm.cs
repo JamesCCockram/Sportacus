@@ -14,6 +14,9 @@ namespace Sportacus
 {
     public partial class EventEntryForm : Form
     {
+        /// <summary>
+        /// Used to store events
+        /// </summary>
         public class Event
         {
             public string eventName;
@@ -21,12 +24,15 @@ namespace Sportacus
             public int yearLevel;
         }
 
+        //Public Variables
         Event[] events;
-
         Main.Student student;
-
         string filePath = "events.xml";
 
+        /// <summary>
+        /// Take the button name, then find it in the events array. Once the event is found in the array the button linked to the event, then prompting the event selection form
+        /// </summary>
+        /// <param name="targetEvent"></param>
         private void ButtonHandler(string targetEvent)
         {
             int location = -1;
@@ -48,6 +54,10 @@ namespace Sportacus
             }
         }
 
+        /// <summary>
+        /// Reads XML file from provided file path, then writes to the events array
+        /// </summary>
+        /// <param name="filePath"></param>
         private void ReadXML(string filePath)
         {
             XmlDocument doc = new XmlDocument();
@@ -80,9 +90,11 @@ namespace Sportacus
 
         private void EventEntryForm_Load(object sender, EventArgs e)
         {
+            //Read XML file as program opens
             ReadXML(filePath);
         }
 
+        //Link buttons using ButtonHandler()
         private void btn100m_Click(object sender, EventArgs e)
         {
             ButtonHandler(btn100m.Text);
