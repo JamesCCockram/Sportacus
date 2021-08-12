@@ -83,6 +83,13 @@ namespace Sportacus
                 MessageBox.Show("Student not found, Please contact the admin to fix the issue", "Student Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Close();
             }
+
+            //Display Teacher view
+            if(students[studentID].isStudent == false)
+            {
+                btnYourEvents.Text = "Student Events";
+                btnAvailableEvents.Hide();
+            }
         }
 
         private int FindLoggedInUser(Student[] students, string username)
@@ -105,17 +112,22 @@ namespace Sportacus
                 //Open and Convert XML file to DataSet
                 DataSet dataSet = new DataSet();
                 dataSet.ReadXml(@"StudentData.xml");
+                DataTable data = dataSet.Tables[0];
+                DataView view = data.AsDataView();
 
-                if(students[studentID].isStudent == true)
+                if (students[studentID].isStudent == true)
                 {
                     //Open Table View of Student Events, and give function the data to display
-                    StudentEvents evf = new StudentEvents(students[studentID].firstName, dataSet);
+                    //Only display student events, filter other students out of dataset
+                    view.RowFilter = $"UserName='{students[studentID].username}'";
+
+                    StudentEvents evf = new StudentEvents(students[studentID].firstName, view);
                     evf.ShowDialog();
                 }
                 else
                 {
-                    //Open Table View of Student Events, and give function the data to display
-                    StudentEvents evf = new StudentEvents(students[studentID].firstName, dataSet);
+                    //Teacher view, includes all students in events xml
+                    StudentEvents evf = new StudentEvents(students[studentID].firstName, view);
                     evf.ShowDialog();
                 }
 

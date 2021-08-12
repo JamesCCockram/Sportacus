@@ -46,7 +46,7 @@ namespace Sportacus
             {
                 XDocument xmlDoc = XDocument.Load("StudentData.xml");
 
-                xmlDoc.Element("Students").Add(new XElement("Student", new XElement("firstName", student.firstName), new XElement("lastName", student.lastName), new XElement("house", student.house), new XElement("yearLevel", Convert.ToString(student.yearLevel)), new XElement("eventName", EventDetails.eventName), new XElement("heat", checkedButton.Text)));
+                xmlDoc.Element("Students").Add(new XElement("Student", new XElement("firstName", student.firstName), new XElement("lastName", student.lastName), new XElement("house", student.house), new XElement("yearLevel", Convert.ToString(student.yearLevel)), new XElement("eventName", EventDetails.eventName), new XElement("heat", checkedButton.Text), new XElement("username", student.username)));
 
                 xmlDoc.Save("StudentData.xml");
             }
