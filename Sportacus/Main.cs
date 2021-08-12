@@ -78,26 +78,34 @@ namespace Sportacus
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //Read XML file
-            ReadXML(filePath);
-
-            //Get username of logged in user
-            username = Environment.UserName;
-            studentID = FindLoggedInUser(students, username);
-
-            //Check if student exists
-            if (studentID == -1)
+            try 
             {
-                MessageBox.Show("Student not found, Please contact the admin to fix the issue", "Student Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Close();
+                //Read XML file
+                ReadXML(filePath);
+
+                //Get username of logged in user
+                username = Environment.UserName;
+                studentID = FindLoggedInUser(students, username);
+
+                //Check if student exists
+                if (studentID == -1)
+                {
+                    MessageBox.Show("Student not found, Please contact the admin to fix the issue", "Student Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Close();
+                }
+
+                //Display Teacher view
+                if (students[studentID].isStudent == false)
+                {
+                    btnYourEvents.Text = "Student Event List";
+                    btnAvailableEvents.Hide();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("User XML file not found, Please contact the admin to fix the issue", "Critical Error: User XML File", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            //Display Teacher view
-            if (students[studentID].isStudent == false)
-            {
-                btnYourEvents.Text = "Student Event List";
-                btnAvailableEvents.Hide();
-            }
         }
 
         /// <summary>
