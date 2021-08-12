@@ -42,7 +42,7 @@ namespace Sportacus
             }
             catch
             {
-                MessageBox.Show("XML File not found", "XML file not found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Event XML file not found, Please contact the admin to fix the issue", "Critical Error: Event XML File", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -53,7 +53,16 @@ namespace Sportacus
         private void ReadXML(string filePath)
         {
             XmlDocument doc = new XmlDocument();
-            doc.Load(filePath);
+
+            try
+            {
+                doc.Load(filePath);
+            }
+            catch
+            {
+                MessageBox.Show("Event XML file not found, Please contact the admin to fix the issue", "Critical Error: Event XML File", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
+            }
 
             XmlNodeList xmlEvents = doc.GetElementsByTagName("event1");
 
