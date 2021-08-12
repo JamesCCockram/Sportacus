@@ -12,7 +12,7 @@ namespace Sportacus
 {
     public partial class StudentEvents : Form
     {
-        public StudentEvents(string Student, DataView dataSet, bool isStudent)
+        public StudentEvents(string Student, DataView dataSet, bool isStudent, string House)
         {
             InitializeComponent();
             dataGridView1.DataSource = dataSet;
@@ -35,10 +35,17 @@ namespace Sportacus
                 dataGridView1.Columns["lastName"].Visible = false;
                 dataGridView1.Columns["house"].Visible = false;
                 dataGridView1.Columns["yearLevel"].Visible = false;
+
+                //Create a personalized label
+                label1.Text = $"{Student}'s Events";
             }
 
-            //Create a personalized label
-            label1.Text = Student + "'s Events";
+            //Teacher View
+            else
+            {
+                label1.Text = $"All Events for {House}";
+            }
+
         }
 
         private void StudentEvents_Load(object sender, EventArgs e)
