@@ -26,7 +26,7 @@ namespace Sportacus
 
         //Public Variables
         string username;
-        string filePath = "students.xml";
+        string filePath = "users.xml";
         int studentID;
         Student[] students;
 
@@ -38,9 +38,18 @@ namespace Sportacus
         private void ReadXML(string filePath)
         {
             XmlDocument doc = new XmlDocument();
-            doc.Load(filePath);
 
-            XmlNodeList xmlStudents = doc.GetElementsByTagName("student");
+            //Try open users xml file, if it doesn't work throw error
+            try
+            {
+                doc.Load(filePath);
+            }
+            catch
+            {
+                MessageBox.Show("User XML file not found, Please contact the admin to fix the issue", "Critical Error: User XML File", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            XmlNodeList xmlStudents = doc.GetElementsByTagName("user");
 
             //Set array size
             students = new Student[xmlStudents.Count];
